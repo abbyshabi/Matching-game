@@ -1,0 +1,137 @@
+body{
+  background: url(./images/use.jpg);  
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  opacity: 0.85;
+  background-blend-mode: screen;
+  // background-position: centr;
+
+  @media only screen and (max-width: 767px) {
+   body {
+    background: url(./images/use.jpg);  
+    background-size: cover;
+    }
+  }
+}
+.container {
+  width: 1000px;   
+  display: grid;
+  grid-template-columns: 5fr 1fr 4fr;
+  position: relative;
+  margin: 200px auto auto;
+
+  .right{
+    border: 1px solid black;
+    padding: 50px;
+    border-radius: 40px;
+    background-color: rgb(238, 121, 79);
+
+    .play-button{
+      border-radius: 50%;
+      padding: 32px;
+      margin-top: 100px;
+      float: right;
+      background: #00ad9f
+    }
+    .difficulty{
+      background: #00ad9f;
+      // opacity: 0;
+      border-radius: 10px;
+      font-weight: 700;
+      color: #fff;
+      // border: none;
+      padding: 17px 15px;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .left {
+    padding: 50px;
+    text-align: center;   
+    font-size: 22px;
+    margin-right:10px;
+    background-color: rgb(209, 189, 75);
+    border-radius: 40px;
+    border: 1px solid black;
+    font-family:fantasy; 
+
+    .name{
+      border-radius: 0;
+      border-width: 0 0 1px 0;
+      background: #fff center right 0 no-repeat;
+      line-height: 20px;
+      padding: 20px ;
+    }
+    
+   
+  }
+
+  .middle {
+    // background-color: rgb(230, 228, 217);
+    // width: ;
+    img{
+      width: 80px;
+      height: 50px;
+      margin-top: 150px;
+    }
+  } 
+  .my-popup-content {
+    margin: auto;
+    background: rgb(26, 24, 24);
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+#cards {
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 20px;
+}
+.card:not(:nth-child(6n)) {
+  margin-right: 20px;
+}
+
+.c {
+  position: absolute;
+  max-width: 160px;
+  max-height: 160px;
+  width: 50ch;
+  height: 50ch;
+  cursor: pointer;
+  will-change: transform, opacity;
+}
+
+.front,
+.back {
+  background-size: cover;
+}
+
+.back {
+  background-image: url(images/Robot.jpeg);
+}
+
+.front {
+  background-image: url(images/Robot.jpeg);
+}
+.dee {
+  background-image: url(images/use.jpg);
+}
+
+.popup-content {
+  margin: auto;
+  background: rgb(238, 236, 236);
+  width: 75%;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+
