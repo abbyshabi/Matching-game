@@ -8,6 +8,10 @@ export default function Home() {
   const [ highScore, setHighScore ] = useState(0);
   const [ options, setOptions ] = useState(null);
 
+  function reset() {
+    window.location.reload
+  }
+
   return (
     <section className='container'>
       <div className='left'>
@@ -40,11 +44,10 @@ export default function Home() {
               Hard
             </button>
           </div>
-          <button className='play-button'>Play</button>
+          <button className='play-button' onClick={() => window.location.reload(false)}>Play</button>
           {options ? (
-            <Popup open={options} className="popup-content">
+            <Popup open={options} className="popup-content" closeOnDocumentClick close={() => window.location.reload(false)}>
               {" "}
-              {console.log(options, highScore, userName)}
               <MemoryGame
                 options={options}
                 setOptions={setOptions}
@@ -62,7 +65,6 @@ export default function Home() {
           <h3>Please enter your user name</h3>
         </div>
       )}
-      {console.log(userName)}
     </section>
   );
 }
@@ -251,7 +253,6 @@ function Card({
 
   return (
     <div onClick={onCardClick}>
-        {console.log(userName)}
       <a.div
         className="c back"
         style={{

@@ -1,5 +1,5 @@
-body{
-  background: url(./images/use.jpg);  
+body {
+  background: url(./images/use.jpg);
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
@@ -8,33 +8,53 @@ body{
   // background-position: centr;
 
   @media only screen and (max-width: 767px) {
-   body {
-    background: url(./images/use.jpg);  
+    height: 500vh;
     background-size: cover;
-    }
   }
 }
 .container {
-  width: 1000px;   
+  width: 1000px;
   display: grid;
   grid-template-columns: 5fr 1fr 4fr;
   position: relative;
   margin: 200px auto auto;
 
-  .right{
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    margin: 300px auto auto;
+  }
+
+  // @include tablet {
+  //   grid-template-columns: 6fr 4fr;
+  // }
+
+  .right {
     border: 1px solid black;
     padding: 50px;
     border-radius: 40px;
     background-color: rgb(238, 121, 79);
 
-    .play-button{
+    @media only screen and (max-width: 768px) {
+      padding: 140px;
+      font-size: 50px;
+
+      .difficulty {
+        height: 150px;
+        width: 150px;
+        padding: 10px;
+        font-size: 32px;
+        margin: 15px 40px;
+      }
+    }
+
+    .play-button {
       border-radius: 50%;
       padding: 32px;
       margin-top: 100px;
       float: right;
-      background: #00ad9f
+      background: #00ad9f;
     }
-    .difficulty{
+    .difficulty {
       background: #00ad9f;
       // opacity: 0;
       border-radius: 10px;
@@ -49,34 +69,48 @@ body{
 
   .left {
     padding: 50px;
-    text-align: center;   
+    text-align: center;
     font-size: 22px;
-    margin-right:10px;
+    margin-right: 10px;
     background-color: rgb(209, 189, 75);
     border-radius: 40px;
     border: 1px solid black;
-    font-family:fantasy; 
+    font-family: fantasy;
 
-    .name{
+    @media only screen and (max-width: 768px) {
+      padding: 150px;
+      font-size: 45px;
+
+      .name {
+        padding: 100px;
+        line-height: 35px;
+        background-color: none;
+      }
+    }
+
+    .name {
       border-radius: 0;
       border-width: 0 0 1px 0;
-      background: #fff center right 0 no-repeat;
+      background: center right no-repeat;
       line-height: 20px;
-      padding: 20px ;
+      padding: 20px;
+      margin-left: 10px;
     }
-    
-   
   }
 
   .middle {
     // background-color: rgb(230, 228, 217);
     // width: ;
-    img{
+
+    @media only screen and (max-width: 768px) {
+      visibility: hidden;
+    }
+    img {
       width: 80px;
       height: 50px;
       margin-top: 150px;
     }
-  } 
+  }
   .my-popup-content {
     margin: auto;
     background: rgb(26, 24, 24);
@@ -90,6 +124,11 @@ body{
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: 768px) {
+    // visibility: hidden;
+    width: 80%;
+  }
 }
 .card {
   width: 160px;
@@ -108,6 +147,12 @@ body{
   height: 50ch;
   cursor: pointer;
   will-change: transform, opacity;
+
+  @media only screen and (max-width: 768px) {
+    // visibility: hidden;
+    width: 50ch;
+    height: 50ch;
+  }
 }
 
 .front,
@@ -132,6 +177,9 @@ body{
   width: 75%;
   padding: 5px;
   border-radius: 10px;
+
+  @media only screen and (max-width: 768px) {
+    // visibility: hidden;
+    width: 50%;
+  }
 }
-
-
