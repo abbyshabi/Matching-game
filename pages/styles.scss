@@ -1,11 +1,9 @@
 body {
-  background: url(./images/use.jpg);
-  background-repeat: no-repeat;
+  background-color: #0073ad;
   width: 100%;
   background-size: cover;
   opacity: 0.85;
   background-blend-mode: screen;
-  // background-position: centr;
 
   @media only screen and (max-width: 767px) {
     height: 500vh;
@@ -15,7 +13,7 @@ body {
 .container {
   width: 1000px;
   display: grid;
-  grid-template-columns: 5fr 1fr 4fr;
+  grid-template-columns: 5fr 4fr;
   position: relative;
   margin: 200px auto auto;
 
@@ -118,6 +116,15 @@ body {
     padding: 5px;
   }
 }
+.scoreboard-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 10px;
+  // width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+}
 
 #cards {
   width: 1060px;
@@ -168,7 +175,7 @@ body {
   background-image: url(images/Robot.jpeg);
 }
 .dee {
-  background-image: url(images/use.jpg);
+  // background-image: url(images/use.jpg);
 }
 
 .popup-content {
@@ -183,3 +190,5 @@ body {
     width: 50%;
   }
 }
+
+
